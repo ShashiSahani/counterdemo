@@ -1,25 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
 
-function App() {
+export default function App() {
+  const [count, setCount] = useState(0);
+
+  function handelAdd() {
+    setCount((count) => count + 1);
+    setCount((count) => count + 1);
+    setCount((count) => count + 1);
+  }
+  function handleSub() {
+    setCount(count - 1);
+  }
+  function reset() {
+    setCount(0);
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        flexDirection: "column",
+      }}
+    >
+      <h1>Hello world!</h1>
+      <div className="box">
+        <p>{count}</p>
+        <div className="box2">
+          <button className="button add" onClick={handelAdd}>
+            ADD
+          </button>
+          <button className="button sub" onClick={handleSub}>
+            SUB
+          </button>
+          <button className="button reset" onClick={reset}>
+            RESET
+          </button>
+        </div>
+      </div>
     </div>
   );
 }
-
-export default App;
