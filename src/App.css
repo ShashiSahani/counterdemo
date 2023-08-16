@@ -85,3 +85,9 @@ button.reset {
 .task-text {
   margin-right: 10px;
 }
+.toggle{
+  background-color: rgb(65, 126, 180);
+  color: white;
+  border: 1px solid green;
+  border-radius: 10px;
+}

@@ -6,17 +6,21 @@ function TaskTwo() {
     { id: 2, name: "Task building", completed: true },
     { id: 3, name: "Tracking Profile", completed: false },
   ]);
+  const [show,setShow]=useState(false);
+
 
   const handleDelete=(id)=>{
     console.log(id)
     setTasks(tasks.filter(item=>id !==item.id));
    
   }
+  
   return (
     <div>
       <p>Task List</p>
+      <button className="toggle" onClick={()=>setShow(!show)}>Toggle</button>
       <ul>
-    {tasks.map((item)=>(
+        {show && tasks.map((item)=>(
         
         <li key={item.id} className="li">
         <div className="task-item">
@@ -25,6 +29,7 @@ function TaskTwo() {
         </div>
       </li>
         ))}
+    
       </ul>
     </div>
   );
