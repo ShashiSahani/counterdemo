@@ -18,11 +18,12 @@ function TaskTwo() {
       <ul>
     {tasks.map((item)=>(
         
-            <li key={item.id}>
-                <span>{item.id} - {item.name}</span>
-                <button onClick={()=>handleDelete(item.id)} className="delete">Delete</button>
-            </li>
-     
+        <li key={item.id} className="li">
+        <div className="task-item">
+          <span className="task-text">{item.id} - {item.name}</span>
+          <button onClick={() => handleDelete(item.id)} className="delete">Delete</button>
+        </div>
+      </li>
         ))}
       </ul>
     </div>

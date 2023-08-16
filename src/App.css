@@ -1,72 +1,87 @@
-.active{
+.active {
   background-color: brown;
 }
-p{
+
+p {
   font-size: 18px;
   text-align: center;
   margin-top: 20px;
   margin-bottom: 20px;
-
 }
-.box{
 
-
+.box {
+  display: flex;
   align-items: center;
   background-color: antiquewhite;
   border-width: 1px solid grey;
   width: 30%;
   height: 30vh;
   justify-content: center;
-  align-items: center;
-border-radius: 20px;
-box-shadow: inset;
-
-
+  border-radius: 20px;
+  box-shadow: inset;
 }
-button{
+
+.delete {
+  background-color: red;
+  color: white;
+  border: 1px solid grey;
+}
+
+button {
   padding: 10px;
   margin: 10px;
   border-radius: 10px;
-
   color: #111111;
 }
-li{
+
+li {
   border: 1px solid grey;
-
-
-}
-ul li{
+  display: flex;
   justify-content: center;
   align-items: center;
 }
-button.add{
+
+ul li {
+  justify-content: center;
+  align-items: center;
+}
+
+button.add {
   background-color: aquamarine;
   justify-content: center;
   border-radius: 10px;
   align-items: center;
- 
 }
-button.sub{
+
+button.sub {
   background-color: red;
   justify-content: center;
   border-radius: 10px;
   align-self: center;
   align-items: center;
 }
-button.reset{
+
+button.reset {
   background-color: rgb(106, 87, 87);
   justify-content: center;
   border-radius: 10px;
   align-self: center;
   align-items: center;
 }
-*{
+
+* {
   margin: 0px;
   padding: 0px;
- 
 }
-.box2{
+
+
+
+.task-item {
   display: flex;
-  justify-content: center;
- 
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-text {
+  margin-right: 10px;
 }
