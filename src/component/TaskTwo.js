@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import "../App.css";
-function TaskTwo() {
+import TaskCart from "./TaskCart";
+function TaskTwo(props) {
   const [tasks, setTasks] = useState([
     { id: 1, name: "Building Profile", completed: false },
     { id: 2, name: "Task building", completed: true },
     { id: 3, name: "Tracking Profile", completed: false },
   ]);
   const [show,setShow]=useState(false);
+  console.log(props)
 
 
   const handleDelete=(id)=>{
@@ -22,12 +24,7 @@ function TaskTwo() {
       <ul>
         {show && tasks.map((item)=>(
         
-        <li key={item.id} className={item.completed?"compeleted":"incompelete"}>
-        <div className="task-item">
-          <span className="task-text">{item.id} - {item.name}</span>
-          <button onClick={() => handleDelete(item.id)} className="delete">Delete</button>
-        </div>
-      </li>
+     <TaskCart item={item} handleDelete={handleDelete}/>
         ))}
     
       </ul>
