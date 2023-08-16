@@ -16,13 +16,13 @@ function TaskTwo() {
   }
   
   return (
-    <div>
+    <div className="container">
       <p>Task List</p>
       <button className="toggle" onClick={()=>setShow(!show)}>Toggle</button>
       <ul>
         {show && tasks.map((item)=>(
         
-        <li key={item.id} className="li">
+        <li key={item.id} className={item.completed?"compeleted":"incompelete"}>
         <div className="task-item">
           <span className="task-text">{item.id} - {item.name}</span>
           <button onClick={() => handleDelete(item.id)} className="delete">Delete</button>

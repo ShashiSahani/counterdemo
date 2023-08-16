@@ -1,93 +1,72 @@
-.active {
-  background-color: brown;
-}
-
-p {
-  font-size: 18px;
-  text-align: center;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-.box {
-  display: flex;
-  align-items: center;
-  background-color: antiquewhite;
-  border-width: 1px solid grey;
-  width: 30%;
-  height: 30vh;
-  justify-content: center;
-  border-radius: 20px;
-  box-shadow: inset;
-}
-
-.delete {
-  background-color: red;
-  color: white;
-  border: 1px solid grey;
-}
-
-button {
-  padding: 10px;
-  margin: 10px;
-  border-radius: 10px;
-  color: #111111;
-}
-
-li {
-  border: 1px solid grey;
+.container{
   display: flex;
   justify-content: center;
-  align-items: center;
-}
-
-ul li {
-  justify-content: center;
-  align-items: center;
-}
-
-button.add {
-  background-color: aquamarine;
-  justify-content: center;
+  background-color: grey;
   border-radius: 10px;
   align-items: center;
-}
-
-button.sub {
-  background-color: red;
-  justify-content: center;
-  border-radius: 10px;
-  align-self: center;
-  align-items: center;
-}
-
-button.reset {
-  background-color: rgb(106, 87, 87);
-  justify-content: center;
-  border-radius: 10px;
-  align-self: center;
-  align-items: center;
-}
-
-* {
-  margin: 0px;
-  padding: 0px;
-}
-
-
-
-.task-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.task-text {
-  margin-right: 10px;
+  flex-direction: column;
 }
 .toggle{
-  background-color: rgb(65, 126, 180);
+  background-color: rgb(80, 80, 159);
+  border: 1px solid grey;
   color: white;
-  border: 1px solid green;
   border-radius: 10px;
+  height: 30px;
+  width: 60px;
+}
+.li{
+  list-style: none;
+  /* border: 2px solid rgb(5, 5, 5); */
+
+ margin: 10px;
+ padding: 10px;
+ border: 2px solid rgb(5, 5, 5);
+ display: flex;
+ /* justify-content: space-evenly; */
+ display: flex;
+ align-items: self-end;
+ box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+.ul{
+ 
+}
+.task-item{
+  display: flex;
+justify-content:space-around ;
+}
+.task-text{
+  color: white;
+}
+.delete{
+  color: white;
+  background-color: red;
+  border-radius: 5px;
+  border: 1px solid grey;
+  margin-left: 50px;
+}
+.compeleted{
+  list-style: none;
+  border: 2px solid rgb(5, 5, 5);
+
+ margin: 10px;
+ padding: 10px;
+ border: 2px solid rgb(5, 5, 5);
+ display: flex;
+ /* justify-content: space-evenly; */
+
+
+ box-shadow: rgba(90, 230, 127, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.incompeleted{
+  list-style: none;
+  border: 2px solid rgb(5, 5, 5);
+
+ margin: 10px;
+ padding: 10px;
+ border: 2px solid rgb(5, 5, 5);
+ display: flex;
+
+
+ align-items: self-end;
+ box-shadow: rgba(181, 99, 99, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
