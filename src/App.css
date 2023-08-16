@@ -26,8 +26,18 @@ box-shadow: inset;
 button{
   padding: 10px;
   margin: 10px;
-  font-size: 18px;
-  color: #ffffff;
+  border-radius: 10px;
+
+  color: #111111;
+}
+li{
+  border: 1px solid grey;
+
+
+}
+ul li{
+  justify-content: center;
+  align-items: center;
 }
 button.add{
   background-color: aquamarine;
