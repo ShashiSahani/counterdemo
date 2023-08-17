@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../App.css";
+import BoxCard from "./BoxCard";
 import TaskCart from "./TaskCart";
 function TaskTwo(props) {
   const [tasks, setTasks] = useState([
@@ -19,15 +20,33 @@ function TaskTwo(props) {
   
   return (
     <div className="container">
-      <p>Task List</p>
-      <button className="toggle" onClick={()=>setShow(!show)}>Toggle</button>
+      <p style={{alignSelf:"center",color:"black",fontSize:"30px",fontWeight:"bold"}}>Task List</p>
+      <button className="toggle"  style={{alignSelf:"center"}} onClick={()=>setShow(!show)}>Toggle</button>
       <ul>
         {show && tasks.map((item)=>(
         
-     <TaskCart item={item} handleDelete={handleDelete}/>
+     <TaskCart key={item?.id} item={item} handleDelete={handleDelete}/>
         ))}
     
       </ul>
+     
+       <BoxCard result="success">
+       <p className="title">Lorem ipsum dolor sit amet .</p>
+        <p className="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, eius?</p>
+     
+       </BoxCard>
+      <BoxCard result="warning">
+        <p className="title">Lorem ipsum dolor sit.</p>
+        <p className="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nisi inventore voluptates quaerat aperiam, nemo illo quod natus perspiciatis incidunt!</p>
+      </BoxCard>
+      <BoxCard result="danger">
+        <p className="title">Lorem, ipsum.</p>
+        <p className="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, eius?</p>
+      </BoxCard>
+      <BoxCard result="primary">
+        <p className="title">Lorem, ipsum dolor.</p>
+        <p className="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, eius?</p>
+      </BoxCard>
     </div>
   );
 }

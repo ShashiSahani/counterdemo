@@ -6,11 +6,11 @@ function TaskCart(props) {
  
   return (
    
-        <li key={props?.item?.id} className={props?.item?.completed?"compeleted":"incompelete"}>
-        <div className="task-item">
+        <li  className={props.item.completed?"compeleted":"incompeleted"} >
+       
           <span className="task-text">{props?.item?.id} - {props?.item?.name}</span>
           <button  className="delete" onClick={()=>props.handleDelete(props.item.id)}>Delete</button>
-        </div>
+       
       </li>
    
   )

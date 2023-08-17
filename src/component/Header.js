@@ -1,5 +1,6 @@
 import React from 'react'
 import logo from '../assets/logo.jpg'
+import '../App.css'
 function Header() {
   return (
   <header className='header'>
