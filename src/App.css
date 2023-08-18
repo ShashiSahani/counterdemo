@@ -6,9 +6,15 @@
   /* align-items: center; */
 
   flex-direction: column;
+  /* text-align: center; */
+}
+.container h1{
+  font-size: 28px;
+  text-align: center;
+  margin: 20px;
 }
 .toggle {
-  background-color: rgb(8, 8, 77);
+  background-color: var(--theme-button);
   border: 1px solid grey;
   color: white;
   border-radius: 8px;
@@ -47,6 +53,7 @@
 .compeleted {
   list-style: none;
   /* border: 2px solid rgb(5, 5, 5); */
+  justify-content: space-around;
   margin: 10px;
   padding: 10px;
   border-radius: 5px;
@@ -56,6 +63,7 @@
 }
 .incompeleted {
   list-style: none;
+  justify-content: space-around;
   border: 2px solid rgb(204, 173, 173);
   margin: 10px;
   padding: 10px;
@@ -70,13 +78,15 @@
   background-color: white;
   justify-content: center;
   align-items: center;
+  height: 50px;
+  display: flex;
 }
 .header {
   background-color: white;
   display: flex;
   justify-content: space-between;
   border: 1px solid black;
-  border-color: white;
+  border-color: var(--theme-border);
   padding: 5px;
   border-bottom-color: rgb(209, 190, 190);
 }
@@ -96,6 +106,8 @@
   width: 80%;
   border-radius: 5px;
   margin: 10px;
+  padding: 5px; 
+  
 }
 .title{
   color: rgb(19, 18, 18);
@@ -163,8 +175,5 @@
 .hidden{
   display: none;
 }
-*{
-  justify-content: center;
- 
-}
+
 
