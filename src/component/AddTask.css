@@ -1,0 +1,38 @@
+.addtask{
+display: flex;
+justify-content: center;
+flex-direction: column;
+}
+label{
+    margin-top: 10px;
+    font-size: 20px;
+    padding: 10px;
+}
+input{
+    margin-top: 10px;
+    font-size: 20px;
+    padding: 10px;
+    width: 50%;
+}
+button{
+    margin-left: 5px;
+    height: 7vh;
+    width: 14vh;
+    padding: 0;
+    cursor: pointer;
+}
+.reset{
+    display: inline-block;
+    padding: 8px 38px 1px 16px;
+    background-color: #6c0404;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 5px;
+    height: 4vh;
+        text-align: center;
+    color: white;
+}
+.reset:hover {
+    background-color: #802b2b;
+  }

@@ -6,7 +6,8 @@ function TaskCart(props) {
   console.log(props);
 
   return (
-    <li
+ <section className="tasklist">
+     <li
       className={`taskcard ${
         props.item.completed ? "compeleted" : "incompeleted"
       }`}
@@ -21,6 +22,7 @@ function TaskCart(props) {
         Delete
       </button>
     </li>
+ </section>
   );
 }
 
