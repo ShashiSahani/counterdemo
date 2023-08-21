@@ -36,3 +36,8 @@ button{
 .reset:hover {
     background-color: #802b2b;
   }
+select{
+    padding: 10px;
+    border-radius: 2px;
+    margin: 5px;
+}

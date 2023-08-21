@@ -3,7 +3,7 @@ import { useState } from "react";
 import "./TaskCard.css";
 import styles from "./Task.module.css"
 function TaskCart(props) {
-  console.log(props);
+  // console.log(props);
 
   return (
  <section className="tasklist">

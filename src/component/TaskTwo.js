@@ -3,29 +3,25 @@ import "../App.css";
 import BoxCard from "./BoxCard";
 import TaskCart from "./TaskCart";
 
-function TaskTwo(props) {
-  const [tasks, setTasks] = useState([
-    { id: 1, name: "Building Profile", completed: false },
-    { id: 2, name: "Task building", completed: true },
-    { id: 3, name: "Tracking Profile", completed: false },
-  ]);
+function TaskTwo({tasks,setTasks}) {
+
   const [show, setShow] = useState(false);
 
-  console.log(props);
+ 
   const style={
    border:"2px solid ",color:show?"red":"green",
     borderColor:show?"pink":"yellow",
   }
 
   const handleDelete = (id) => {
-    console.log(id);
+    // console.log(id);
     setTasks(tasks.filter((item) => id !== item.id));
   };
 
   return (
     <div className="container">
     
-    <h1 style={style}>Task List {props.info}</h1>
+    <h1 style={style}>Task List</h1>
   
       <button
         className="toggle"

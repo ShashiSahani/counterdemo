@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "./AddTask.css";
-export default function AddTask() {
+export default function AddTask({tasks,setTasks}) {
   const [taskValue, setTaskValue] = useState("");
- const [progress,setProgress]=useState(false);
+  const [progress, setProgress] = useState(false);
   const handleChange = (e) => {
     setTaskValue(e.target.value);
   };
@@ -10,6 +10,7 @@ export default function AddTask() {
     setTaskValue("");
     setProgress(false);
   };
+ 
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(Boolean(progress));
@@ -18,8 +19,8 @@ export default function AddTask() {
       name: taskValue,
       completed: Boolean(progress),
     };
-    console.log(typeof progress);
-    console.log(task);
+    setTasks([...tasks,task]);
+
     handlereset();
   };
   return (
@@ -29,13 +30,13 @@ export default function AddTask() {
         <input
           type="text"
           value={taskValue}
-          id="task" 
+          id="task"
           name="task"
           autoComplete="off"
           placeholder="Task Name"
           onChange={handleChange}
         />
-        <select onChange={(e) => setProgress(e.target.value)} value={progress} >
+        <select onChange={(e) => setProgress(e.target.value)} value={progress}>
           <option value="false">Pending</option>
           <option value="true">Compeleted</option>
         </select>
